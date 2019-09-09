@@ -4,10 +4,9 @@ import "fmt"
 import "time"
 
 func main(){
-	if true {
-		Display("coucou")
-	}
-	fmt.Println(Display("Salut a tous"))
+	var test = [110000]string{999:"a"}
+	fmt.Println(test[999])
+	fmt.Println(len(test))
 }
 
 // Print the given message in the standard output
