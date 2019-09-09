@@ -4,9 +4,14 @@ import "fmt"
 import "time"
 
 func main(){
-	var test = [110000]string{999:"a"}
-	fmt.Println(test[999])
-	fmt.Println(len(test))
+	var a = []string{"A","B","C","D"}
+	fmt.Println(a)
+	b := make([]string, len(a))
+	copy(a,b)
+	a[0] = "z"
+
+	fmt.Println(a)
+	fmt.Println(b)
 }
 
 // Print the given message in the standard output
