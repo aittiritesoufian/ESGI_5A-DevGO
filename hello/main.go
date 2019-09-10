@@ -2,28 +2,14 @@ package main
 
 import "fmt"
 import "time"
-
-type myln int32
+import "github.com/hello/myint"
 
 func main(){
-	var mi = myln(15)
+	var mi = myint.MyType(15)
 	fmt.Println(mi.Divide(5))
 	fmt.Println(mi.Add(5))
 	fmt.Println(mi.Sub(5))
 	fmt.Println(mi.Multiply(5))
-}
-
-func (mi myln) Divide(n int) myln{
-	return mi / myln(n)
-}
-func (mi myln) Add(n int) myln{
-	return mi + myln(n)
-}
-func (mi myln) Sub(n int) myln{
-	return mi - myln(n)
-}
-func (mi myln) Multiply(n int) myln{
-	return mi * myln(n)
 }
 
 // Print the given message in the standard output
