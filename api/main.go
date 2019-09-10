@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -24,6 +25,10 @@ func main() {
 	r := gin.Default()
 	r.GET("/user", func(c *gin.Context) {
 		c.JSON(200, u)
+	})
+	r.POST("user", func(c *gin.Context) {
+		log.Println(c.Request)
+		c.JSON(200, nil)
 	})
 	r.Run(":8080")
 }
