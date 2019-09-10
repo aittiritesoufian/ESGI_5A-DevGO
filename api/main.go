@@ -27,7 +27,10 @@ func main() {
 		c.JSON(200, u)
 	})
 	r.POST("user", func(c *gin.Context) {
-		log.Println(c.Request)
+		var u User
+		c.BindJSON(&u)
+
+		log.Println(u)
 		c.JSON(200, nil)
 	})
 	r.Run(":8080")
