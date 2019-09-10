@@ -3,14 +3,27 @@ package main
 import "fmt"
 import "time"
 
+type myln int32
+
 func main(){
-	var m = map[string]int{}
-	var letter = 'a'
-	for index := 0; index < 27; index++ {
-		m[string(letter)] = index
-		letter++
-	}
-	fmt.Println(m["w"])
+	var mi = myln(15)
+	fmt.Println(mi.Divide(5))
+	fmt.Println(mi.Add(5))
+	fmt.Println(mi.Sub(5))
+	fmt.Println(mi.Multiply(5))
+}
+
+func (mi myln) Divide(n int) myln{
+	return mi / myln(n)
+}
+func (mi myln) Add(n int) myln{
+	return mi + myln(n)
+}
+func (mi myln) Sub(n int) myln{
+	return mi - myln(n)
+}
+func (mi myln) Multiply(n int) myln{
+	return mi * myln(n)
 }
 
 // Print the given message in the standard output
