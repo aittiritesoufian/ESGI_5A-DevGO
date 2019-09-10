@@ -4,14 +4,13 @@ import "fmt"
 import "time"
 
 func main(){
-	var a = []string{"A","B","C","D"}
-	fmt.Println(a)
-	b := make([]string, len(a))
-	copy(a,b)
-	a[0] = "z"
-
-	fmt.Println(a)
-	fmt.Println(b)
+	var m = map[string]int{}
+	var letter = 'a'
+	for index := 0; index < 27; index++ {
+		m[string(letter)] = index
+		letter++
+	}
+	fmt.Println(m["w"])
 }
 
 // Print the given message in the standard output
