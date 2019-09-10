@@ -17,3 +17,7 @@ type User struct{
 	FirstName, LastName string
 	DateOfBirth time.Time
 }
+
+func (u User) String() string {
+	return u.FirstName + " " + u.LastName
+}
